@@ -6,6 +6,10 @@ comPort='/dev/cu.usbmodem1411';
 
 [s,flag]=setupSerial(comPort);
 
+
+
+
+
 serial Print
 
 

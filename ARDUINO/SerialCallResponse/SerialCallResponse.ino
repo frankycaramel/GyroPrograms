@@ -31,7 +31,7 @@ int inByte = 0;         // incoming serial byte
 
 void setup() {
   // start serial port at 9600 bps:
-  Serial.begin(115200);
+  Serial.begin(9600);
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
@@ -44,12 +44,15 @@ void setup() {
 
 void loop() {
   // if we get a valid byte, read analog ins:
+  // angle code here
+  Serial.println('z');
   
 }
 
 void establishContact() {
   while (Serial.available() <= 0) {
     Serial.print('a');   // send an a
+    Serial.println();
     delay(300);
   }
 }
